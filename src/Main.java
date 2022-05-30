@@ -5,93 +5,94 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Создаем ArrayList "Список продуктов"
+        //РЎРѕР·РґР°РµРј ArrayList "РЎРїРёСЃРѕРє РїСЂРѕРґСѓРєС‚РѕРІ"
         ArrayList<String> lists = new ArrayList<>();
-        lists.add("хлеб");
-        lists.add("огурцы");
-        lists.add("помидоры");
-        lists.add("картошка");
-        lists.add("сыр");
-        lists.add("курица");
-        lists.add("кофе");
+        lists.add("С…Р»РµР±");
+        lists.add("РѕРіСѓСЂС†С‹");
+        lists.add("РїРѕРјРёРґРѕСЂС‹");
+        lists.add("РєР°СЂС‚РѕС€РєР°");
+        lists.add("СЃС‹СЂ");
+        lists.add("РєСѓСЂРёС†Р°");
+        lists.add("РєРѕС„Рµ");
 
-        //Вывод списка в консоль
+        //Р’С‹РІРѕРґ СЃРїРёСЃРєР° РІ РєРѕРЅСЃРѕР»СЊ
         for (String str : lists) {
             System.out.println(str);
         }
 
-        // поиск элемента "картошка", вывести его индекс
-        System.out.println("Индекс элемента: " + lists.indexOf("картошка"));
+        // РїРѕРёСЃРє СЌР»РµРјРµРЅС‚Р° "РєР°СЂС‚РѕС€РєР°", РІС‹РІРµСЃС‚Рё РµРіРѕ РёРЅРґРµРєСЃ
+        System.out.println("РРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р°: " + lists.indexOf("РєР°СЂС‚РѕС€РєР°"));
 
-        //проверить, есть ли элемент "огурцы" в списке, если да, вывести его, если нет, то сообщть об этом
-        String product = "огурцы";
+        //РїСЂРѕРІРµСЂРёС‚СЊ, РµСЃС‚СЊ Р»Рё СЌР»РµРјРµРЅС‚ "РѕРіСѓСЂС†С‹" РІ СЃРїРёСЃРєРµ, РµСЃР»Рё РґР°, РІС‹РІРµСЃС‚Рё РµРіРѕ, РµСЃР»Рё РЅРµС‚, С‚Рѕ СЃРѕРѕР±С‰С‚СЊ РѕР± СЌС‚РѕРј
+        String product = "РѕРіСѓСЂС†С‹";
         if (lists.contains(product)) {
             int x = lists.indexOf(product);
-            System.out.println("В списке есть продукт: " + lists.get(x));
+            System.out.println("Р’ СЃРїРёСЃРєРµ РµСЃС‚СЊ РїСЂРѕРґСѓРєС‚: " + lists.get(x));
         } else {
-            System.out.println("К сожалению, в списке нет данного продукта");
+            System.out.println("Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РІ СЃРїРёСЃРєРµ РЅРµС‚ РґР°РЅРЅРѕРіРѕ РїСЂРѕРґСѓРєС‚Р°");
         }
 
 
-        //удалить элемент под конкретным местом, например, 4 списке (по индексу 3) и вывести список в консоль
+        //СѓРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РїРѕРґ РєРѕРЅРєСЂРµС‚РЅС‹Рј РјРµСЃС‚РѕРј, РЅР°РїСЂРёРјРµСЂ, 4 СЃРїРёСЃРєРµ (РїРѕ РёРЅРґРµРєСЃСѓ 3) Рё РІС‹РІРµСЃС‚Рё СЃРїРёСЃРѕРє РІ РєРѕРЅСЃРѕР»СЊ
         lists.remove(3);
-        System.out.println("Список после корректировок");
+        System.out.println("РЎРїРёСЃРѕРє РїРѕСЃР»Рµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРѕРє");
         for (String str : lists) {
             System.out.println(str);
         }
 
-        //удалить конкретный элемент в списке, например, "кофе" и вывести новый список
-        lists.remove("кофе");
-        System.out.println("Список после корректировок");
+        //СѓРґР°Р»РёС‚СЊ РєРѕРЅРєСЂРµС‚РЅС‹Р№ СЌР»РµРјРµРЅС‚ РІ СЃРїРёСЃРєРµ, РЅР°РїСЂРёРјРµСЂ, "РєРѕС„Рµ" Рё РІС‹РІРµСЃС‚Рё РЅРѕРІС‹Р№ СЃРїРёСЃРѕРє
+        lists.remove("РєРѕС„Рµ");
+        System.out.println("РЎРїРёСЃРѕРє РїРѕСЃР»Рµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРѕРє");
         for (String str : lists) {
             System.out.println(str);
         }
 
-        //Создаем LinkedList "Список цветов" и выводим в косоль
+        //РЎРѕР·РґР°РµРј LinkedList "РЎРїРёСЃРѕРє С†РІРµС‚РѕРІ" Рё РІС‹РІРѕРґРёРј РІ РєРѕРЅСЃРѕР»СЊ
         LinkedList<String> colors = new LinkedList<>();
-        colors.add("красный");
-        colors.add("желтый");
-        colors.add("черный");
-        colors.add("белый");
-        colors.add("синий");
-        System.out.println("Список цветов");
+        colors.add("РєСЂР°СЃРЅС‹Р№");
+        colors.add("Р¶РµР»С‚С‹Р№");
+        colors.add("С‡РµСЂРЅС‹Р№");
+        colors.add("Р±РµР»С‹Р№");
+        colors.add("СЃРёРЅРёР№");
+        System.out.println("РЎРїРёСЃРѕРє С†РІРµС‚РѕРІ");
         for (String str : colors) {
             System.out.println(str);
         }
-        //Поиск наличия элемента "зеленый" в списке = ответ true/false
-        System.out.println(colors.contains("зеленый"));
+        //РџРѕРёСЃРє РЅР°Р»РёС‡РёСЏ СЌР»РµРјРµРЅС‚Р° "Р·РµР»РµРЅС‹Р№" РІ СЃРїРёСЃРєРµ = РѕС‚РІРµС‚ true/false
+        System.out.println(colors.contains("Р·РµР»РµРЅС‹Р№"));
 
-        //удалить элемент "черный" и вывести новый список
-        colors.remove("черный");
-        System.out.println("Новый список цветов");
+        //СѓРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ "С‡РµСЂРЅС‹Р№" Рё РІС‹РІРµСЃС‚Рё РЅРѕРІС‹Р№ СЃРїРёСЃРѕРє
+        colors.remove("С‡РµСЂРЅС‹Р№");
+        System.out.println("РќРѕРІС‹Р№ СЃРїРёСЃРѕРє С†РІРµС‚РѕРІ");
         for (String str : colors) {
             System.out.println(str);
         }
 
-        //Особые методы для LinkedList
-        //удалить первый элемент списка
+        //РћСЃРѕР±С‹Рµ РјРµС‚РѕРґС‹ РґР»СЏ LinkedList
+        //СѓРґР°Р»РёС‚СЊ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°
         colors.pollFirst();
-        System.out.println("Новый список цветов");
+        System.out.println("РќРѕРІС‹Р№ СЃРїРёСЃРѕРє С†РІРµС‚РѕРІ");
         for (String str : colors) {
             System.out.println(str);
         }
-        //удалить последний элемент списка
+
+        //СѓРґР°Р»РёС‚СЊ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°
         colors.pollLast();
-        System.out.println("Новый список цветов");
-        for (String str : colors) {
-            System.out.println(str);
-        }
-
-        //добвим на первое место "фиолетовый",  на последнее "серый"
-        colors.addFirst("фиолетовый");
-        colors.addLast("серый");
-        System.out.println("Новый список цветов");
+        System.out.println("РќРѕРІС‹Р№ СЃРїРёСЃРѕРє С†РІРµС‚РѕРІ");
         for (String str : colors) {
             System.out.println(str);
         }
 
 
+        //РґРѕР±Р°РІРёРј РЅР° РїРµСЂРІРѕРµ РјРµСЃС‚Рѕ "С„РёРѕР»РµС‚РѕРІС‹Р№",  РЅР° РїРѕСЃР»РµРґРЅРµРµ "СЃРµСЂС‹Р№"
+        colors.addFirst("С„РёРѕР»РµС‚РѕРІС‹Р№");
+        colors.addLast("СЃРµСЂС‹Р№");
+        System.out.println("РќРѕРІС‹Р№ СЃРїРёСЃРѕРє С†РІРµС‚РѕРІ");
+        for (String str : colors) {
+            System.out.println(str);
+        }
 
+        //MyArrayList
         MyArrayList<Integer> myArrayList = new MyArrayList<>();
         myArrayList.add(5);
         myArrayList.add(1);
@@ -101,8 +102,7 @@ public class Main {
         myArrayList.delete(2);
         myArrayList.print();
 
-
-
+        //MyLinkedList
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(8);
         myLinkedList.add(5);

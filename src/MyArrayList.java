@@ -17,6 +17,7 @@ public class MyArrayList <E>{
         }
     }
 
+
     public void print(){
         for  (E e : list) {
             System.out.println(e);

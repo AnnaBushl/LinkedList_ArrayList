@@ -17,7 +17,6 @@ public class MyLinkedList<E> {
         }
     }
 
-
     public void add(int block){
         Node newNode = new Node(block);
         Node thisNode = firstBlock;
